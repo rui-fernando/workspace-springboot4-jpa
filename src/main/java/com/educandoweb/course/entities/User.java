@@ -21,7 +21,7 @@ public class User implements Serializable {
     private String phone;
     private String password;
 
-    @JsonIgnore
+    @JsonIgnore //impedir associação de mão dupla
     @OneToMany(mappedBy = "client")
     private List<Order> orders = new ArrayList<>();
 
